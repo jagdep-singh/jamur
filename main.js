@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const ANIMATION_DURATION = 2000;
         const ACTIONS = {
           PREVIEW_ISLAND: 'PREVIEW_ISLAND',
-          DESTROY_ISLAND: 'DESTROY_ISLAND',
+          DESTRamu_ISLAND: 'DESTROY_ISLAND',
           SWAP_ISLANDS: 'SWAP_ISLANDS',
           NEXT_STORY: 'NEXT_STORY',
           NEXT_LEVEL: 'NEXT_LEVEL',
@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
           // Level 0
           //
           {
-            title: 'Islander Sue:',
+            title: 'Jamindar Chacha Sikandar:',
             side: 'good',
             paragraphs: [
-              'Oh! Hi there! I was just putting together my first island. 😁',
+              'Oh! Hi there! I was just putting together my first Farm. 😁',
               'It\'s not much now, but I think it has potental 🥰',
               'Please, take a look around, but be careful not to poke it too hard, the dirt is still soft.',
             ],
@@ -43,35 +43,35 @@ document.addEventListener("DOMContentLoaded", function () {
               action:  ACTIONS.PREVIEW_ISLAND,
             },
           },{
-            title: 'Trouble Maker:',
+            title: 'Badmash Chaman:',
             side: 'evil',
             paragraphs: [
               'You poked me!',
               'You look smart, so I\'ll poke your brain!',
-              'Watch as I destroy this pitiful island!',
+              'Watch as I destRamu this pitiful farm!',
               'Bubble sort everything back into place, if you can!',
             ],
             next: {
               label: 'I\'m on it!',
-              action: ACTIONS.DESTROY_ISLAND,
+              action: ACTIONS.DESTRamu_ISLAND,
             },
           },{
-            title: 'Islander Sue:',
+            title: 'Jamindar Chacha Sikandar:',
             side: 'good',
             paragraphs: [
               'You did it! 🤩🥳',
-              'You are amazing at this! I bet you could fix all the islands!',
+              'You are amazing at this! I bet you could fix all the farms!',
             ],
             next: {
               label: 'Thank you!',
               action: ACTIONS.NEXT_STORY,
             },
           },{
-            title: 'Trouble Maker:',
+            title: 'Badmash Chaman:',
             side: 'evil',
             paragraphs: [
               'Oh you are sooooo smart are you? 👿',
-              'Let\'s see you handle this island! 😈',
+              'Let\'s see you handle this farm! 😈',
             ],
             next: {
               label: 'Bring it!',
@@ -82,21 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
           // Level 1
           //
           {
-            title: 'Islander Roy:',
+            title: 'Jamindar Chacha Ramu:',
             side: 'good',
             paragraphs: [
-              'Oh no! the Trouble Maker is back! 😱',
-              'Please leave me and my island alone!',
+              'Oh no! the Badmash Chaman is back! 😱',
+              'Please leave me and my farm alone!',
             ],
             next: {
               label: 'I am here to help!',
               action: ACTIONS.PREVIEW_ISLAND,
             },
           },{
-            title: 'Trouble Maker:',
+            title: 'Badmash Chaman:',
             side: 'evil',
             paragraphs: [
-              'Watch as I destroy this mediocre island!',
+              'Watch as I destRamu this mediocre farm!',
               'Bubble sort everything back into place, if you can!',
             ],
             next: {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
               action: ACTIONS.DESTROY_ISLAND,
             },
           }, {
-            title: 'Islander Roy:',
+            title: 'Jamindar Chacha Ramu:',
             side: 'good',
             paragraphs: [
               'Wow, you are incredible!',
@@ -115,15 +115,15 @@ document.addEventListener("DOMContentLoaded", function () {
               action: ACTIONS.NEXT_STORY,
             },
           },{
-            title: 'Trouble Maker:',
+            title: 'Badmash Chaman:',
             side: 'evil',
             paragraphs: [
               'How dare you? 😡',
               'Who do you think you are?',
-              'Let\'s see you handle this island! 😈',
+              'Let\'s see you handle this farm ! 😈',
             ],
             next: {
-              label: 'Stop destroying people\'s islands!',
+              label: 'Stop destRamuing people\'s farms!',
               action: ACTIONS.NEXT_LEVEL,
             },
           },
@@ -131,33 +131,33 @@ document.addEventListener("DOMContentLoaded", function () {
           // Level 2
           //
           {
-            title: 'Islander Jill:',
+            title: 'Jamindar Chacha Dilbaag:',
             side: 'good',
             paragraphs: [
               'Welcome, both of you. 🙂',
-              'I have heard about your skill from Sue and Roy',
+              'I have heard about your skill from Sikandar and Ramu',
             ],
             next: {
               label: 'You have?',
               action: ACTIONS.PREVIEW_ISLAND,
             },
           },{
-            title: 'Trouble Maker:',
+            title: 'Badmash Chaman:',
             side: 'evil',
             paragraphs: [
-              'Watch as I destroy this amazing island!',
+              'Watch as I destRamu this amazing farm!',
               'Bubble sort everything back into place, if you can!',
             ],
             next: {
               label: 'I\'m on it!',
-              action: ACTIONS.DESTROY_ISLAND,
+              action: ACTIONS.DESTRamu_ISLAND,
             },
           }, {
-            title: 'Islander Jill:',
+            title: 'Jamindar Chacha Dilbaag:',
             side: 'good',
             paragraphs: [
               'You really are as good as they said.',
-              'Thank you for restoring the islands.',
+              'Thank you for restoring the farms.',
               'I hope you have enjoyed playing my little game.',
             ],
             next: {
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
          * "Destory" the island by randomizing the visitors and breaking it into a grid.
          * @return {Promise}
          */
-        const destroyIsland = wrapForAnimation((state) => {
+        const destRamuIsland = wrapForAnimation((state) => {
           const { visitors } = state;
           state.set({
             visitors: randomizeVisitors(visitors),
@@ -675,8 +675,8 @@ document.addEventListener("DOMContentLoaded", function () {
           switch (nextAction) {
             case ACTIONS.PREVIEW_ISLAND:
               return previewIsland(state);
-            case ACTIONS.DESTROY_ISLAND:
-              return destroyIsland(state);
+            case ACTIONS.DESTRamu_ISLAND:
+              return destRamuIsland(state);
             case ACTIONS.SWAP_ISLANDS:
               bottomIndex = parseInt(currentTarget.dataset.idx, 10);
               return bubbleIsland(state, bottomIndex);
