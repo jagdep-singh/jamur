@@ -594,14 +594,14 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         
           lighterhtml.render(elm, () => lighterhtml.html`<div class=${classList.join(' ')}>
-                <form method="dialog" ontransitionend=${state}>
-                <p class="title">${title}</p>
-                ${paragraphs.map(txt => lighterhtml.html`<p>${txt}</p>`)}
-                <menu class="dialog-menu">
-                        <button onclick=${state} action=${next.action} class="btn nes-btn is-primary">${next.label}</button>
-                </menu>
-                </form>
-                </div>`);
+            <form method="dialog" ontransitionend=${state}>
+              <p class="title">${title}</p>
+              ${paragraphs.map(txt => lighterhtml.html`<p>${txt}</p>`)}
+              <menu class="dialog-menu">
+                <button onclick=${state} action=${next.action} class="btn nes-btn is-primary">${next.label}</button>
+              </menu>
+            </form>
+          </div>`);
         }
         
         /**

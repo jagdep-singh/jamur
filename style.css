@@ -1,3 +1,4 @@
+
 body {
         background-image: linear-gradient(#209cee, #006bb3);
         /* Some vars are updated via JS */
@@ -12,6 +13,53 @@ body {
         cursor: wait;
       }
       
+      /* Arcade game-style dialog */
+.nes-dialog {
+  background-color: #000;
+  border: 4px solid #ffec00;
+  color: #ffec00;
+  font-family: "Press Start 2P", sans-serif;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Title */
+.nes-dialog .title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.nes-dialog p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.nes-dialog .btn {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 12px;
+  padding: 8px 16px;
+  background-color: #285ceb;
+  border: 2px solid #000;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nes-dialog .btn:hover {
+  background-color: #000;
+  color: #eeff00;
+}
+
+/* Dark theme for evil side */
+.nes-dialog.is-dark {
+  background-color: #000;
+  border: 4px solid #ff0044;
+  color: #ff0044;
+}
+
+
       #canvas > div {
         /* Setup the canvas */
         margin: var(--block--height) 0;
